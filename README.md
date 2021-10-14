@@ -27,6 +27,7 @@ Example run: python  RNAfastqtoBigWig www.PRO-Seqdata.com /home/xyz-user/fastq-f
 URL: provide a link to download the data.
 fastq folder: provide a path/foldername to download all the fastq files.
 sample #'s: <int> provide the sample numbers such as 1-10 or 1-5,7-8 or for single sample 6-6.
+UMI length: <int> provide the lenght of UMI sequence such as 8 or 4.
 min insert: <int> provide the minimum length of an insert.
 max insert: <int> provide the maximum length of an insert.
 threads: <int> provide the number of threads. For example, if there 80 threads available and 10 samples to process then you may assign atmost 8 threads for each sample.
@@ -34,7 +35,8 @@ bowtie index: provide the path to the combined index of only the genomes used in
 chr size file: provide the path to the combined chromsome size fasta file of only the genomes used in the sequencing.
                If you are trying to generate a chromsome size file use samtools faidx combined.genome.fa
                and cut -f1,2 combined.genome.fa.fai > combined.genome.sizes.
-genome assembly: provide a comma separated list of genome assemblies used in the sequencing such as hg38,KF297339.1,JQCY02.1
+genome assembly: provide a comma separated list of genome assemblies used in the sequencing such as hg38,KF297339.1,JQCY02.1.
+SpikeIN: provide the genome assembly name used as SpikeIN in the sequencing such as JQCY02.1 or simply mention no. 
 sample_key: provide sample key in a .csv format where sample#'s and sample names are separated by a comma or simply mention no.
 ```
 ## Requirements:
@@ -52,9 +54,7 @@ Order:
 
 Sample1_lane1_20200324000_S1_L001_R1_001.fastq.gz (forward)
 
-Sample1_lane1_20200324000_S1_L001_R2_001.fastq.gz (UMI sequences for deduping)
-
-Sample1_lane1_20200324000_S1_L001_R3_001.fastq.gz (reverse)
+Sample1_lane1_20200324000_S1_L001_R2_001.fastq.gz (reverse)
 
 Users must provide a path to their own trim_galore,samtools, bedtools, bowtie, and bedGraphtoBigWig installations inside this program.
 
