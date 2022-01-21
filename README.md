@@ -1,5 +1,5 @@
 # RNAfastqtoBigWig
-Converts fastq.gz files into bigwig tracks for visusalization on UCSC browser or IGV.
+Converts fastq.gz files into bigwig tracks for visualization on UCSC browser or IGV.
 
 Author: Mrutyunjaya Parida, David Price Lab, UIOWA
 
@@ -27,7 +27,7 @@ Example run: python  RNAfastqtoBigWig www.PRO-Seqdata.com /home/xyz-user/fastq-f
 URL: provide a link to download the data.
 fastq folder: provide a path/foldername to download all the fastq files.
 sample #'s: <int> provide the sample numbers such as 1-10 or 1-5,7-8 or for single sample 6-6.
-UMI length: <int> provide the lenght of UMI sequence such as 8 or 4.
+UMI length: <int> provide the length of UMI sequence such as 8 or 4.
 min insert: <int> provide the minimum length of an insert.
 max insert: <int> provide the maximum length of an insert.
 threads: <int> provide the number of threads. For example, if there 80 threads available and 10 samples to process then you may assign atmost 8 threads for each sample.
