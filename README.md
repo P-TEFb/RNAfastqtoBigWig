@@ -23,7 +23,7 @@ python RNAfastqtoBigWig <URL> \
 Example run: python  RNAfastqtoBigWig www.PRO-Seqdata.com /home/xyz-user/xyz-fastq-folder 1-10 4 18 600 10 \
 /home/xyz-user/genome-bowtie-index /home/xyz-user/genome-chrom.sizes hg38,JQCY02.1 JQCY02.1 samplekey.csv
 ```
-Here, I am using the moth genome(JQCY02.1) as my Spike-In. Genome-bowtie-index consists of both the human (hg38) and the Spike-In (JQCY02.1) genomes. 
+Here, I am using the moth genome(JQCY02.1) as my Spike-In. The genome-bowtie-index consists of both the human (hg38) and the Spike-In (JQCY02.1) genomes. 
 To create a bowtie index like this I combined the human and moth genomes into one fasta file and ran bowtie-build on this combined.fasta file.
 
 ### Parameter description:
