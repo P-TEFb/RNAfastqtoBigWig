@@ -16,11 +16,11 @@ python RNAfastqtoBigWig <URL> \
                  <# of threads> \
                  <bowtie index> \
                  <chr size file> \
-                 <genome assembly> \
+                 <genome assemblies> \
                  <SpikeIN> \
                  <sample key>
                  
-Example run: python  RNAfastqtoBigWig www.PRO-Seqdata.com /home/xyz-user/fastq-folder 1-10 4 18 600 10 /home/xyz-user/genome-bowtie-index /home/xyz-user/genome-chrom.sizes hg38,KF297339.1,JQCY02.1 JQCY02.1 samplekey.csv                 
+Example run: python  RNAfastqtoBigWig www.PRO-Seqdata.com /home/xyz-user/fastq-folder 1-10 4 18 600 10 /home/xyz-user/genome-bowtie-index /home/xyz-user/genome-chrom.sizes hg38,JQCY02.1 JQCY02.1 samplekey.csv                 
 ```
 ### Parameter description:
 ```
