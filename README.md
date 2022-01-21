@@ -4,7 +4,7 @@ Converts fastq.gz files into bigwig tracks for visualization on UCSC browser or 
 Author: Mrutyunjaya Parida, David Price Lab, UIOWA
 
 ## Usage:
-RNAfastqtoBigWig runs on Python 2.7+. It is a linux based, multi-thread capable, Next Generation Sequencing (NGS) data analysis program with a command line interface.
+RNAfastqtoBigWig runs on Python 2.7+. It is a linux based, multi-thread capable, Paired-end Next Generation Sequencing (NGS) data analysis program with a command line interface.
 It checks for 12 parameters in the user input. If the number of parameters are less than 12 the program displays the following usage example and parameter description prior to exiting the run.
 ```
 python RNAfastqtoBigWig <URL> \
@@ -17,10 +17,12 @@ python RNAfastqtoBigWig <URL> \
                  <bowtie index> \
                  <chr size file> \
                  <genome assemblies> \
-                 <SpikeIN> \
+                 <Spike-In> \
                  <sample key>
                  
-Example run: python  RNAfastqtoBigWig www.PRO-Seqdata.com /home/xyz-user/fastq-folder 1-10 4 18 600 10 /home/xyz-user/genome-bowtie-index /home/xyz-user/genome-chrom.sizes hg38,JQCY02.1 JQCY02.1 samplekey.csv                 
+Example run: python  RNAfastqtoBigWig www.PRO-Seqdata.com /home/xyz-user/xyz-fastq-folder 1-10 4 18 600 10 /home/xyz-user/genome-bowtie-index /home/xyz-user/genome-chrom.sizes hg38,JQCY02.1 JQCY02.1 samplekey.csv
+Here, I am using the moth genome(JQCY02.1) as my Spike-In. Genome-bowtie-index consists of both the human (hg38) and the Spike-In (JQCY02.1) genomes. To create a bowtie index like this I combined the human and moth genomes into one fasta file and ran bowtie-build on this combined.fasta file.
+
 ```
 ### Parameter description:
 ```
