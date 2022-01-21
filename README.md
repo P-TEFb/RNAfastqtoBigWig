@@ -60,13 +60,11 @@ Sample1_lane1_20200324000_S1_L001_R1_001.fastq.gz (forward)
 
 Sample1_lane1_20200324000_S1_L001_R2_001.fastq.gz (reverse)
 
-Users must provide a path to their own trim_galore,samtools, bedtools, bowtie, and bedGraphtoBigWig installations inside this program.
+We use the --small_rna option in trim_galore program to remove the adapter sequences. But they can be changed as per the users preference in the TRIM function.
 
-Adapter sequences are hard coded but can be changed as per the users preference in the TRIM function.
+Samples sequenced in 2 or more lanes are automatically merged into one alignment file as long the lane #'s are mentioned in the sample file name following the above format.
 
-Samples sequenced in 2 lanes are automatically merged into one alignment file as long the lane #'s are mentioned in the sample file name following the above format.
-
-If sample numbers are mentioned such as Sample_# the program will produce errors and exit.
+If filenames are named such as "Sample_#" instead of "Sample#" the program will produce errors and exit. If the lane#'s are not present after the Sample# separated by an "_"  
 
 ### Output:
 A BIGWIG folder is created where bigwig files for each sample can be found. Bigwig files can be loaded onto Integrative Genomics Viewer (IGV) to visualize the number of fragments aligned to any genomic position.
