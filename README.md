@@ -64,7 +64,8 @@ We use the --small_rna option in trim_galore program to remove the adapter seque
 
 Samples sequenced in 2 or more lanes are automatically merged into one alignment file as long the lane #'s are mentioned in the sample file name following the above format.
 
-If filenames are named such as "Sample_#" instead of "Sample#" the program will produce errors and exit. If the lane#'s are not present after the Sample# separated by an "_"  
+If filenames are named such as "Sample_#" instead of "Sample#" the program will produce errors and exit. 
+If the lane#'s are not present after the Sample# separated by an '_ the program may produce errors and exit.  
 
 ### Output:
 A BIGWIG folder is created where bigwig files for each sample can be found. Bigwig files can be loaded onto Integrative Genomics Viewer (IGV) to visualize the number of fragments aligned to any genomic position.
