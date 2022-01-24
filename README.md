@@ -5,9 +5,9 @@ Author: Mrutyunjaya Parida, David Price Lab, UIOWA
 
 ## Usage:
 RNAfastqtoBigWig runs on Python 2.7+. It is a linux based, multi-thread capable, Paired-end Next Generation Sequencing (NGS) data analysis program with a command line interface.
-It checks for 12 parameters in the user input. If the number of parameters are less than 12 the program displays the following usage example and parameter description prior to exiting the run. This program is written to accomodate the fastq sample file structures of PriceLab. 
+It checks for 12 parameters in the user input. If the number of parameters are less than 12 the program displays the following usage example and parameter description prior to exiting the run. This program is written to accomodate the fastq sample file structures of PriceLab. To download the code use this link: https://drive.google.com/file/d/1i7r7ai-4SJgQ13L2_lFDWRiisKDtasR7/view?usp=sharing.
 ```
-python RNAfastqtoBigWig <URL> \
+python RNAfastqtoBigWig.py <URL> \
                  <fastq folder> \
                  <sample #'s> \
                  <UMI length> \
@@ -23,7 +23,7 @@ python RNAfastqtoBigWig <URL> \
 Example run: python  RNAfastqtoBigWig www.PRO-Seqdata.com /home/xyz-user/xyz-fastq-folder 1-10 4 18 600 10 \
 /home/xyz-user/genome-bowtie-index /home/xyz-user/genome-chrom.sizes hg38,JQCY02.1 JQCY02.1 samplekey.csv
 ```
-Here, I am using the moth genome(JQCY02.1) as my Spike-In. The genome-bowtie-index consists of both the human (hg38) and the Spike-In (JQCY02.1) genomes. 
+Note: Here, I am using the moth genome(JQCY02.1) as my Spike-In. The genome-bowtie-index consists of both the human (hg38) and the Spike-In (JQCY02.1) genomes. 
 To create a bowtie index like this I combined the human and moth genomes into one fasta file and ran bowtie-build on this combined.fasta file.
 
 ### Parameter description:
@@ -62,12 +62,16 @@ Sample1_lane1_20200324000_S1_L001_R2_001.fastq.gz (reverse)
 
 We use the --small_rna option in trim_galore program to remove the adapter sequences. But they can be changed as per the users preference in the TRIM function.
 
-Samples sequenced in 2 or more lanes are automatically merged into one alignment file as long the lane #'s are mentioned in the sample file name following the above format.
+Samples sequenced in 2 or more lanes are automatically merged into one alignment file as long the lane #'s are mentioned in the sample file name in the above format.
 
-If filenames are named such as "Sample_#" instead of "Sample#" the program will produce errors and exit. 
-If the lane#'s are not present after the Sample# separated by an '_ the program may produce errors and exit.  
+If filenames are named such as "Sample_#" instead of "Sample#" the program will produce errors and exit. If the lane#'s are not present after the Sample# separated by an underscore _ the program may produce errors and exit. If the programs exits, a user can rerun the program after meeting the requirements of the program. If required a "#" symbol can be added to the beginning of the following lines (L) to avoid repeating the following commands during the data workup process: 
+L38 --> download the data.
+L77 --> trim the data.
+L116 --> align the data.
+L140,L144,L148,L152 --> dedup the data.
+After deduping the program normalizes data using Spike-In if mentioned or not and makes bigwig format tracks for visualization on the UCSC genome browser.
 
 ### Output:
-A BIGWIG folder is created where bigwig files for each sample can be found. Bigwig files can be loaded onto Integrative Genomics Viewer (IGV) to visualize the number of fragments aligned to any genomic position.
+A BIGWIG folder is created where bigwig files for each sample can be found. Bigwig files can be loaded onto Integrative Genomics Viewer (IGV) to visualize the number of fragments aligned to any genomic position. The bigwig files can also be used to make a UCSC genome browser session after uploading the tracks from the tracks.txt file in the BIGWIG folder. The bigDataUrl=http://xyz-webserver-address.edu/ is a made-up web server address which can be replaced with a real one.
 
 Based on the example run the BIGWIG folder should be under /home/xyz-user/fastq-folder/MAPPED/BIGWIG.
