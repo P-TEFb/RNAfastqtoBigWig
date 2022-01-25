@@ -35,7 +35,7 @@ sample #'s: <int> provide the sample numbers such as 1-10 or 1-5,7-8 or for sing
 UMI length: <int> provide the length of UMI sequence such as 8 or 4.
 min insert: <int> provide the minimum length of an insert.
 max insert: <int> provide the maximum length of an insert.
-threads: <int> provide the number of threads. For example, if there 80 threads available and 10 samples to process then you may assign atmost 8 threads for each sample.
+threads: <int> provide the number of threads. For example, if there are 80 threads available and 10 samples to process then you may assign atmost 8 threads for each sample.
 bowtie index: provide the path to the combined index of only the genomes used in the sequencing. If you are trying to build a new index use bowtie-build.
 chr size file: provide the path to the combined chromsome size fasta file of only the genomes used in the sequencing.
                If you are trying to generate a chromsome size file use samtools faidx combined.genome.fa
