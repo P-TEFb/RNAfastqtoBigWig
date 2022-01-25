@@ -25,7 +25,7 @@ Example run: python  RNAfastqtoBigWig www.PRO-Seqdata.com /home/xyz-user/xyz-fas
 /home/xyz-user/genome-bowtie-index /home/xyz-user/genome-chrom.sizes hg38,JQCY02.1 JQCY02.1 samplekey.csv
 ```
 Note: Here, I am using the moth genome(JQCY02.1) as my Spike-In. The genome-bowtie-index consists of both the human (hg38) and the Spike-In (JQCY02.1) genomes. 
-To create a bowtie index like this I combined the human and moth genomes into one fasta file and ran bowtie-build on this combined.fasta file. I used a minimum insert length of 26bp and maximum insert length of 608bp because the UMIs at both ends of a read is 4bp in length. After trimming the UMIs my goal is retain all fragments between 18-600bp for further analysis.Please consider the strategy suitable for your sequencing library.
+To create a bowtie index like this I combined the human and moth genomes into one fasta file and ran bowtie-build on this combined.fasta file. I used a minimum insert length of 26bp and maximum insert length of 608bp because the UMIs at both ends of a read is 4bp in length. After trimming the UMIs my goal is retain all fragments between 18-600bp for further analysis. Please consider the strategy suitable for your sequencing library.
 
 ### Parameter description:
 ```
