@@ -5,7 +5,8 @@ Author: Mrutyunjaya Parida, David Price Lab, UIOWA
 
 ## Usage:
 RNAfastqtoBigWig runs on Python 2.7+. It is a linux based, multi-thread capable, Paired-end Next Generation Sequencing (NGS) data analysis program with a command line interface.
-It checks for 12 parameters in the user input. If the number of parameters are less than 12 the program displays the following usage example and parameter description prior to exiting the run. This program is written to accomodate the fastq sample file structures of PriceLab. To download the code use this link: https://drive.google.com/file/d/1i7r7ai-4SJgQ13L2_lFDWRiisKDtasR7/view?usp=sharing. This program was published in https://pubmed.ncbi.nlm.nih.gov/35048979/.
+It checks for 12 parameters in the user input. If the number of parameters are less than 12 the program displays the following usage example and parameter description prior to exiting the run. This program is written to accomodate the fastq sample file structures of PriceLab. To download RNAfastqtoBigWig use this link: https://drive.google.com/file/d/1i7r7ai-4SJgQ13L2_lFDWRiisKDtasR7/view?usp=sharing. The program folder contains installations of samtools, bedtools, dedup, trim_galore, and bedGraphToBigWig. Please run RNAfastqtoBigWig from the program folder. This program was published in https://pubmed.ncbi.nlm.nih.gov/35048979/.
+
 ```
 python RNAfastqtoBigWig.py <URL> \
                  <fastq folder> \
