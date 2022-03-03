@@ -21,7 +21,7 @@ python RNAfastqtoBigWig.py <URL> \
                  <Spike-In> \
                  <sample key>
                  
-Example run: python  RNAfastqtoBigWig www.PRO-Seqdata.com /home/xyz-user/xyz-fastq-folder 1-10 4 26 608 10 \
+Example run: python  RNAfastqtoBigWig www.PRO-Seqdata.com /home/xyz-user/xyz-fastq-folder 1-10 4 26 608 8 \
 /home/xyz-user/genome-bowtie-index /home/xyz-user/genome-chrom.sizes hg38,JQCY02.1 JQCY02.1 samplekey.csv
 ```
 Note: Here, I am using the moth genome(JQCY02.1) as my Spike-In. The genome-bowtie-index consists of both the human (hg38) and the Spike-In (JQCY02.1) genomes. 
