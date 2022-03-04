@@ -74,10 +74,9 @@ Samples sequenced in 2 or more lanes are automatically merged into one alignment
 
 If filenames are named such as "Sample_#" instead of "Sample#" the program will produce errors and exit. If the lane#'s are not present after the Sample# separated by an underscore _ the program may produce errors and exit. If the programs exits, a user can rerun the program after meeting the requirements of the program. If required a "#" symbol can be added to the beginning of the following lines (L) to avoid repeating the following commands during the data workup process: 
 ```
-L38 --> download the data.
-L77 --> trim the data.
-L116 --> align the data.
-L140,L144,L148,L152 --> dedup the data.
+L82 --> trim the data.
+L121 --> align the data.
+L145,L149,L153,L157 --> dedup the data.
 ```
 After deduping the program normalizes data using Spike-In if mentioned or not and makes bigwig format tracks for visualization on the UCSC genome browser.
 
