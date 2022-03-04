@@ -19,7 +19,8 @@ python RNAfastqtoBigWig.py <URL> \
                  <chr size file> \
                  <genome assemblies> \
                  <Spike-In> \
-                 <sample key>
+                 <sample key> \
+                 <dwnld>
                  
 Example run: python  RNAfastqtoBigWig www.PRO-Seqdata.com /home/xyz-user/xyz-fastq-folder 1-10 4 26 608 8 \
 /home/xyz-user/genome-bowtie-index /home/xyz-user/genome-chrom.sizes hg38,JQCY02.1 JQCY02.1 samplekey.csv
@@ -48,6 +49,7 @@ sample_key: provide sample key in a .csv format where sample#'s and sample names
             Sample3,Exp1
             Sample4,Exp2
             or simply mention no.
+ dwnld: <yes/no> first a user must select this option as "yes" for the program to download the data. If the program downloads the data but the sample names are not according to         the program requirements then program will show errors and exit. Please fix the sample names based on the instructions provided below. Please write "no" for this option         when trying to re-run this program.
 ```
 ## Requirements:
 Python libraries: ``` joblib, and glob. ```
