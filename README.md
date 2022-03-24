@@ -30,6 +30,8 @@ To create a bowtie index like this I combined the human and moth genomes into on
 ```
 bowtie-build reference_sequence.fasta index_name
 Example run: bowtie-build /home/xyz-user/genome-hg38-JQCY02.1.fa /home/xyz-user/genome-hg38-JQCY02.1
+Parallelized version for faster run: bowtie-build --threads 20 /home/xyz-user/genome-hg38-JQCY02.1.fa /home/xyz-user/genome-hg38-JQCY02.1 (If you have version 1.2.3 or higher and a multithreading library installed).
+
 ```
 I used a minimum insert length of 26bp and maximum insert length of 608bp because the UMIs at both ends of a read is 4bp in length. After trimming the UMIs my goal is retain all fragments between 18-600bp for further analysis. Please consider the strategy suitable for your sequencing library.
 
