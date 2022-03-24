@@ -46,8 +46,9 @@ max insert: <int> provide the maximum length of an insert.
 threads: <int> provide the number of threads. For example, if there are 80 threads available and 10 samples to process then you may assign atmost 8 threads for each sample.
 bowtie index: provide the path to the combined index of only the genomes used in the sequencing. If you are trying to build a new index use bowtie-build.
 chr size file: provide the path to the combined chromsome size fasta file of only the genomes used in the sequencing.
-               If you are trying to generate a chromsome size file use samtools faidx combined.genome.fa
-               and cut -f1,2 combined.genome.fa.fai > combined.genome.sizes.
+               If you are trying to generate a chromsome size file first do 
+               samtools faidx combined.genome.fa
+               cut -f1,2 combined.genome.fa.fai > combined.genome.sizes .
 genome assembly: provide a comma separated list of genome assemblies used in the sequencing such as hg38,JQCY02.1.
 Spike-In: provide the name of the genome assembly used as Spike-In in the sequencing such as JQCY02.1 or simply mention no. 
 sample_key: provide sample key in a .csv format where sample#'s and sample names are separated by a comma as follows:
