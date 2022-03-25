@@ -57,7 +57,11 @@ sample_key: provide sample key in a .csv format where sample#'s and sample names
             Sample3,Exp1
             Sample4,Exp2
             or simply mention no.
- dwnld: <yes/no> first a user must select this option as "yes" for the program to download the data. If the program downloads the data but the sample names are not according to         the program requirements then program will show errors and exit. Please fix the sample names based on the instructions provided below. Please write "no" for this option         when trying to re-run this program.
+ dwnld: <yes/no> first a user must select this option as "yes" for the program to download the data. 
+         If the program downloads the data but the sample names are not according to 
+         the program requirements then program will show errors and exit. Please fix the sample names 
+         based on the instructions provided below. Please write "no" for this option 
+         when trying to re-run this program.
 ```
 ## Requirements:
 Python libraries: ``` joblib, and glob. ```
