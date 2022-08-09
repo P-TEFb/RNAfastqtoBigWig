@@ -84,13 +84,7 @@ We use the --small_rna option in trim_galore program to remove the adapter seque
 
 Samples sequenced in 2 or more lanes are automatically merged into one alignment file as long the lane #'s are mentioned in the sample file name in the above format.
 
-If filenames are named such as "Sample_#" instead of "Sample#" the program will produce errors and exit. If the lane#'s are not present after the Sample# separated by an underscore _ the program may produce errors and exit. If the programs exits, a user can rerun the program after meeting the requirements of the program. If required a "#" symbol can be added to the beginning of the following lines (L) to avoid repeating the following commands during the data workup process: 
-```
-L82 --> trim the data.
-L121 --> align the data.
-L145,L149,L153,L157 --> dedup the data.
-```
-After deduping the program normalizes data using Spike-In if mentioned or not and makes bigwig format tracks for visualization on the UCSC genome browser.
+If filenames are named such as "Sample_#" instead of "Sample#" the program will produce errors and exit. If the lane#'s are not present after the Sample# separated by an underscore _ the program may produce errors and exit. If the programs exits, a user can rerun the program after meeting the requirements of the program. After deduping the program normalizes data using Spike-In if mentioned or not and makes bigwig format tracks for visualization on the UCSC genome browser.
 
 ### Output:
 A BIGWIG folder is created where bigwig files for each sample can be found. Bigwig files can be loaded onto Integrative Genomics Viewer (IGV) to visualize the number of fragments aligned to any genomic position. The bigwig files can also be used to make a UCSC genome browser session after uploading the tracks from the tracks.txt file in the BIGWIG folder. The bigDataUrl=http://xyz-webserver-address.edu/ is a made-up web server address which can be replaced with a real one.
